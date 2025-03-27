@@ -23,5 +23,14 @@ RSpec.describe StringCalculator do
       expect(calculator.add("1\n2,3")).to eq(6)
     end
 
+    it 'should not return wrong value' do
+	   expect(StringCalculator.add("1, 3, 4")).not_to eq(10)
+	end
+
+	it 'should support different delimiters' do
+		expect(StringCalculator.add("//;\n1;2")).to eq(3)
+	end
+
+
 
 end
