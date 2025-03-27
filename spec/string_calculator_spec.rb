@@ -24,11 +24,11 @@ RSpec.describe StringCalculator do
     end
 
     it 'should not return wrong value' do
-	   expect(StringCalculator.add("1, 3, 4")).not_to eq(10)
+	   expect(calculator.add("1, 3, 4")).not_to eq(10)
 	end
 
 	it 'should support different delimiters' do
-		expect(StringCalculator.add("//;\n1;2")).to eq(3)
+		expect(calculator.add("//;\n1;2")).to eq(3)
 	end
 
 	it "raises an error for negative numbers" do
